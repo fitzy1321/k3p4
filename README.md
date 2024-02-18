@@ -55,3 +55,15 @@ sudo reboot
 curl -L https://github.com/containerd/nerdctl/releases/download/v1.7.3/nerdctl-1.7.3-linux-amd64.tar.gz > nerdctl.tar.gz
 tar xzf nerdctl.tar.gz
 ```
+
+## Deployment idea #1
+
+Put my Deno Fresh Blog in to k3s.
+
+[How to Dockerize Fresh app](https://fresh.deno.dev/docs/concepts/deployment)
+
+Github docker build job?
+
+https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry
+
+How do ingress? Do I need an nginx thingy pointed to fresh site?
