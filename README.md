@@ -49,8 +49,7 @@ sudo reboot
 
 ### Manage / build containers
 
-[nerdctl](
-https://github.com/containerd/nerdctl) might help?
+[nerdctl](https://github.com/containerd/nerdctl) might help?
 
 ```sh
 curl -L https://github.com/containerd/nerdctl/releases/download/v1.7.3/nerdctl-1.7.3-linux-amd64.tar.gz > nerdctl.tar.gz
