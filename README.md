@@ -4,10 +4,10 @@ K3P4 - 4 node Raspberry Pi 4 Cluster using k3s
 
 List of hostnames for each board
 
-k3p4m = master k3s node
-k3p4w1 = worker k3s node #1
-k3p4w2 ...
-k3p4w3 ...
+- k3p4m = master k3s node
+- k3p4w1 = worker k3s node #1
+- k3p4w2 ...
+- k3p4w3 ...
 
 ## Setting up Raspberry Pis
 
@@ -46,3 +46,12 @@ sudo reboot
 ## Install k3s on master node
 
 `curl -sfl https://get.k3s.io | K3S_KUBECONFIG_MODE="644" sh -s`
+
+### Manage / build containers
+
+nerdctl ?
+
+```sh
+curl -L https://github.com/containerd/nerdctl/releases/download/v1.7.3/nerdctl-1.7.3-linux-amd64.tar.gz > nerdctl.tar.gz
+tar xzf nerdctl.tar.gz
+```
