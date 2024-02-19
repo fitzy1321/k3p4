@@ -103,15 +103,6 @@ get your k3s token `sudo cat /var/lib/rancher/k3s/server/node-token`
 
 `curl -sfL https://get.k3s.io | K3S_URL=https://<master static ip addr>:6443 K3S_TOKEN=<master k3s token> sh -`
 
-### Manage / build containers
-
-[nerdctl](https://github.com/containerd/nerdctl) might help?
-
-```sh
-curl -L https://github.com/containerd/nerdctl/releases/download/v1.7.3/nerdctl-1.7.3-linux-amd64.tar.gz > nerdctl.tar.gz
-tar xzf nerdctl.tar.gz
-```
-
 ## Deployment idea #1
 
 Put my Deno Fresh Blog in to k3s.
