@@ -74,7 +74,8 @@ Or this
 
 ```sh
 # for static wifi ip with imager configed wifi
-# sudo vim /etc/NetworkManager/system-connections/preconfigured.nmconnection
+sudo vim /etc/NetworkManager/system-connections/preconfigured.nmconnection
+
 [ipv4]
 address1=<static ip>/24,<router ip>
 dns=<dns ip>;1.1.1.1;8.8.8.8;
@@ -83,7 +84,8 @@ may-fail=false
 method=manual
 
 # for static ethernet
-# sudo vim /etc/NetworkManager/system-connections/Wired\ connection\ 1.nmconnection
+sudo vim /etc/NetworkManager/system-connections/Wired\ connection\ 1.nmconnection
+
 [ipv4]
 address1=<other static ip>/24,<router ip>
 dns=<dns ip>;1.1.1.1;8.8.8.8;
