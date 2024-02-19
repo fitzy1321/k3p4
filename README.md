@@ -13,6 +13,8 @@ List of hostnames for each board
 
 All pis in my build are 'Raspberry Pi 4 Model B 8gb arm64' boards, with 32gb sandisk cards.
 
+OS: Raspberry Pi OS Bookworm (~Debian 12)
+
 I'm still figuring out k3s and networking and everything else.
 
 ### Needed software
