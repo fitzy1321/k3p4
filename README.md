@@ -1,13 +1,12 @@
 # k3p4
 
-K3P4 - 4 node Raspberry Pi 4 Cluster using k3s
+K3P4 - 4 node Raspberry Pi Cluster using k3s
 
-List of hostnames for each board
+Goal of this project:
 
-- k3p4m = master k3s node
-- k3p4w1 = worker k3s node #1
-- k3p4w2 ...
-- k3p4w3 ...
+I want to learn k8s deployments and hosting various apps on it, and I want to mess around with raspberry pis.
+
+K3s will work on a pi cluster, and it's easy to get started.
 
 ## Deployment idea #1
 
