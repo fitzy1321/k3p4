@@ -72,6 +72,9 @@ metric 200
 static ip_address=<other static ip>/24
 static routers=<your router ip>
 static domain_name_servers=<your dns ip>
+# close file
+
+sudo reboot
 ```
 
 Raspberry Pi OS Bookworm uses Network Manager instead of dhcpcd.service, use `sudo nmtui` to set static ip's.
@@ -88,6 +91,7 @@ dns=<your dns ip>;1.1.1.1;8.8.8.8;
 dns-search=ht.home;
 may-fail=false
 method=manual
+# close file
 
 # for static ethernet
 sudo vim /etc/NetworkManager/system-connections/Wired\ connection\ 1.nmconnection
@@ -98,6 +102,9 @@ dns=<dns ip>;1.1.1.1;8.8.8.8;
 dns-search=ht.home;
 may-fail=false
 method=manual
+# close file
+
+sudo reboot
 ```
 
 ### Install k3s on master node
