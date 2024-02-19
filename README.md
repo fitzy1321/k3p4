@@ -15,9 +15,7 @@ Put my Deno Fresh Blog in to k3s.
 
 [How to Dockerize Fresh app](https://fresh.deno.dev/docs/concepts/deployment)
 
-Github docker build job?
-
-https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry
+[Github docker build job](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry) ?
 
 How do ingress? Do I need an nginx ingress thingy pointed to fresh site?
 
@@ -135,3 +133,5 @@ get your k3s token `sudo cat /var/lib/rancher/k3s/server/node-token`
 - https://docs.k3s.io/installation/requirements?os=pi
 - https://docs.k3s.io/related-projects
 - https://raspberrypi.stackexchange.com/questions/37920/how-do-i-set-up-networking-wifi-static-ip-address-on-raspbian-raspberry-pi-os
+- https://fresh.deno.dev/docs/concepts/deployment
+- https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry
