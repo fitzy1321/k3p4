@@ -1,5 +1,6 @@
 # k3p4
 
+[K3P4 Pig](./assets/k3p4_pig.jpg)
 K3P4 - 4 node Raspberry Pi 4 Cluster using k3s
 
 List of hostnames for each board
