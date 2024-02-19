@@ -9,6 +9,18 @@ List of hostnames for each board
 - k3p4w2 ...
 - k3p4w3 ...
 
+## Deployment idea #1
+
+Put my Deno Fresh Blog in to k3s.
+
+[How to Dockerize Fresh app](https://fresh.deno.dev/docs/concepts/deployment)
+
+Github docker build job?
+
+https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry
+
+How do ingress? Do I need an nginx ingress thingy pointed to fresh site?
+
 ## Setting up Raspberry Pis
 
 All pis in my build are 'Raspberry Pi 4 Model B 8gb arm64' boards, with 32gb sandisk cards.
@@ -29,20 +41,19 @@ sudo vim /boot/firmware/cmdline.txt
 
 # Add this to the existing oneliner
 cgroup_memory=1 cgroup_enable=memory
-```
 
-### Turn off / remove bluetooth
+# close file
 
-```sh
+# Turn off / remove bluetooth
 sudo vim /boot/firmware/config.txt`
 
 # Disable bluetooth
 dtoverlay=disable-bt
 # Disable wifi
 #dtoverlay=disable-wifi
-```
 
-```sh
+# close file
+
 sudo systemctl disable hciuart.service
 sudo systemctl disable bluetooth.service
 sudo apt purge bluez
@@ -52,9 +63,9 @@ sudo reboot
 
 ### Setting Static IPs
 
-macos `arp -a` shows devices on network ?
+`ip r | grep default` for dns server ip
 
-pis `ip r | grep default` for dns server ip
+`ifconfig` to see device interaces
 
 For Raspberry Pi OS Bulleyes or lower, change dhcpcd settings
 
@@ -116,18 +127,6 @@ get your k3s token `sudo cat /var/lib/rancher/k3s/server/node-token`
 ### Install k3s on worker / agent nodes
 
 `curl -sfL https://get.k3s.io | K3S_URL=https://<master static ip addr>:6443 K3S_TOKEN=<master k3s token> sh -`
-
-## Deployment idea #1
-
-Put my Deno Fresh Blog in to k3s.
-
-[How to Dockerize Fresh app](https://fresh.deno.dev/docs/concepts/deployment)
-
-Github docker build job?
-
-https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry
-
-How do ingress? Do I need an nginx ingress thingy pointed to fresh site?
 
 ### References
 
