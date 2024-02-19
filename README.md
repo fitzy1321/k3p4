@@ -56,19 +56,23 @@ macos `arp -a` shows devices on network ?
 
 pis `ip r | grep default` for dns server ip
 
-<!-- # This didn't work because Raspberry Pi OS Bookworm uses Network Manager instead of dhcp
+For Raspberry Pi OS Bulleyes or lower, change dhcpcd settings
+
 ```sh
-# sudo vim /etc/dhcpcd.conf
+sudo vim /etc/dhcpcd.conf
 
 interface eth0
 metric 300
-static ip_address=192.168.0.40/24
-static routers=192.168.0.1
-static domain_name_servers=192.168.0.1
+static ip_address=<your static ip>/24
+static routers=<your router ip>
+static domain_name_servers=<your dns ip>
 
 interface wlan0
 metric 200
-``` -->
+static ip_address=<other static ip>/24
+static routers=<your router ip>
+static domain_name_servers=<your dns ip>
+```
 
 Raspberry Pi OS Bookworm uses Network Manager instead of dhcpcd.service, use `sudo nmtui` to set static ip's.
 
@@ -79,8 +83,8 @@ Or this
 sudo vim /etc/NetworkManager/system-connections/preconfigured.nmconnection
 
 [ipv4]
-address1=<static ip>/24,<router ip>
-dns=<dns ip>;1.1.1.1;8.8.8.8;
+address1=<your static ip>/24,<your router ip>
+dns=<your dns ip>;1.1.1.1;8.8.8.8;
 dns-search=ht.home;
 may-fail=false
 method=manual
