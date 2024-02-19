@@ -32,13 +32,12 @@ cgroup_memory=1 cgroup_enable=memory
 ### Turn off / remove bluetooth
 
 ```sh
-# sudo vim /boot/firmware/config.txt`
-# disable bluetooth
-dtoverlay=disable-bt
-# disable wifi
-dtoverlay=disable-wifi
+sudo vim /boot/firmware/config.txt`
 
-# close and save file
+# Disable bluetooth
+dtoverlay=disable-bt
+# Disable wifi
+#dtoverlay=disable-wifi
 ```
 
 ```sh
@@ -77,8 +76,8 @@ Or this
 # for static wifi ip with imager configed wifi
 # sudo vim /etc/NetworkManager/system-connections/preconfigured.nmconnection
 [ipv4]
-address1=<static ip>/24,192.168.0.1
-dns=192.168.0.1;1.1.1.1;8.8.8.8;
+address1=<static ip>/24,<router ip>
+dns=<dns ip>;1.1.1.1;8.8.8.8;
 dns-search=ht.home;
 may-fail=false
 method=manual
@@ -86,20 +85,20 @@ method=manual
 # for static ethernet
 # sudo vim /etc/NetworkManager/system-connections/Wired\ connection\ 1.nmconnection
 [ipv4]
-address1=<other static ip>/24,192.168.0.1
-dns=192.168.0.1;1.1.1.1;8.8.8.8;
+address1=<other static ip>/24,<router ip>
+dns=<dns ip>;1.1.1.1;8.8.8.8;
 dns-search=ht.home;
 may-fail=false
 method=manual
 ```
 
-## Install k3s on master node
+### Install k3s on master node
 
 `curl -sfl https://get.k3s.io | K3S_KUBECONFIG_MODE="644" sh -s`
 
 get your k3s token `sudo cat /var/lib/rancher/k3s/server/node-token`
 
-## Install k3s on worker / agent nodes
+### Install k3s on worker / agent nodes
 
 `curl -sfL https://get.k3s.io | K3S_URL=https://<master static ip addr>:6443 K3S_TOKEN=<master k3s token> sh -`
 
@@ -114,3 +113,11 @@ Github docker build job?
 https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry
 
 How do ingress? Do I need an nginx ingress thingy pointed to fresh site?
+
+### References
+
+- https://www.pragmaticlinux.com/2021/08/raspberry-pi-headless-setup-with-the-raspberry-pi-imager/
+- https://docs.k3s.io/quick-start
+- https://docs.k3s.io/installation/requirements?os=pi
+- https://docs.k3s.io/related-projects
+- https://raspberrypi.stackexchange.com/questions/37920/how-do-i-set-up-networking-wifi-static-ip-address-on-raspbian-raspberry-pi-os
