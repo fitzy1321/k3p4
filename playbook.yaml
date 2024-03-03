@@ -4,5 +4,5 @@
 
   tasks:
     - name: Debug message
-      ansible.builtin.debug:
+      debug:
         msg: "testing 1 2 3 ... done"
