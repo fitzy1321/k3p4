@@ -1,0 +1,9 @@
+master:
+  hosts:
+    k3p4m:
+
+workers:
+  hosts:
+    k3p4w1:
+    k3p4w2:
+    k3p4w3:
