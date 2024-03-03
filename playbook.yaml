@@ -3,6 +3,6 @@
   hosts: all
 
   tasks:
-    - name: debug
-      debug:
+    - name: Debug message
+      ansible.builtin.debug:
         msg: "testing 1 2 3 ... done"
