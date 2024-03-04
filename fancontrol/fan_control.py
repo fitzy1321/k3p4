@@ -17,8 +17,11 @@ def main():
         while True:
             res = os.popen("vcgencmd measure_temp").readline()
             temp = res.replace("temp=", "").replace("'C\n", "")
-            # print("temp is {0}".format(temp)) #Uncomment here for testing
             cpu_temp = float(temp)
+
+            # Uncomment here for testing
+            # print(f"{temp=}")
+
             if cpu_temp > MAX_TEMP:
                 GPIO.output(PIN, True)
             else:
