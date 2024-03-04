@@ -1,11 +1,11 @@
 ---
 k3p4_cluster:
   children:
-    server:
+    master:
       hosts:
         k3p4m:
 
-    agent:
+    worker:
       hosts:
         k3p4w1:
         k3p4w2:
