@@ -1,14 +1,15 @@
 #!/usr/bin/env python3
 
+import time
 import os
-from time import sleep
+
 import RPi.GPIO as GPIO
 
-PIN = 2  # The pin ID, edit here to change it
-MAX_TEMP = 70  # The maximum temperature in Celsius after which we trigger the fan
+PIN = 2
+MAX_TEMP = 60  # Celsius
 
 
-if __name__ == "__main__":
+def main():
     GPIO.setmode(GPIO.BCM)
     GPIO.setup(PIN, GPIO.OUT)
     GPIO.setwarnings(False)
@@ -23,7 +24,14 @@ if __name__ == "__main__":
             else:
                 GPIO.output(PIN, False)
 
-                # Read the temperature every 5 sec, increase or decrease this limit if you want
-                sleep(5)
+                time.sleep(5)
+    except KeyboardInterrupt:
+        pass
     finally:
-        GPIO.cleanup()  # resets all GPIO ports used by this program
+        GPIO.cleanup()
+
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemError(main())
