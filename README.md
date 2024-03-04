@@ -125,6 +125,15 @@ get your k3s token `sudo cat /var/lib/rancher/k3s/server/node-token`
 
 `curl -sfL https://get.k3s.io | K3S_URL=https://<master static ip addr>:6443 K3S_TOKEN=<master k3s token> sh -`
 
+### ssh key
+
+Copy the ssh key you want to use with ansible
+
+```sh
+# this should be on your main machine
+ssh-copy-id -i ~/.ssh/id_rsa.pub pi@<k3p4 hostname here>
+```
+
 ### References
 
 - https://www.pragmaticlinux.com/2021/08/raspberry-pi-headless-setup-with-the-raspberry-pi-imager/
