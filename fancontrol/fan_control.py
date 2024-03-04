@@ -20,7 +20,7 @@ def main():
             cpu_temp = float(temp)
 
             # Uncomment here for testing
-            # print(f"{temp=}")
+            # print(f"{cpu_temp=}")
 
             if cpu_temp > MAX_TEMP:
                 GPIO.output(PIN, True)
