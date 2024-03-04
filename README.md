@@ -136,10 +136,10 @@ ssh-copy-id -i ~/.ssh/id_rsa.pub pi@<k3p4 hostname here>
 
 ### References
 
-- https://www.pragmaticlinux.com/2021/08/raspberry-pi-headless-setup-with-the-raspberry-pi-imager/
-- https://docs.k3s.io/quick-start
-- https://docs.k3s.io/installation/requirements?os=pi
-- https://docs.k3s.io/related-projects
-- https://raspberrypi.stackexchange.com/questions/37920/how-do-i-set-up-networking-wifi-static-ip-address-on-raspbian-raspberry-pi-os
-- https://fresh.deno.dev/docs/concepts/deployment
-- https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry
+- <https://www.pragmaticlinux.com/2021/08/raspberry-pi-headless-setup-with-the-raspberry-pi-imager/>
+- <https://docs.k3s.io/quick-start>
+- <https://docs.k3s.io/installation/requirements?os=pi>
+- <https://docs.k3s.io/related-projects>
+- <https://raspberrypi.stackexchange.com/questions/37920/how-do-i-set-up-networking-wifi-static-ip-address-on-raspbian-raspberry-pi-os>
+- <https://fresh.deno.dev/docs/concepts/deployment>
+- <https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry>
