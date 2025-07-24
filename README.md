@@ -24,6 +24,7 @@ Add this text to the ollama.service file:
 ```ini
 [Service]
 Environment="OLLAMA_HOST=0.0.0.0:11434"
+Environment="OLLAMA_NUM_PARALLEL=4"
 ```
 
 ```sh
@@ -32,20 +33,25 @@ systemctl restart ollama
 systemctl enable ollama
 ```
 
+Find network devices (i.e. pi hostnames): `arp -a`
+
 ## Run Open WebUI
 
 **For Local Mac conection**:
 
 - `docker stop open-webui`
 - `just openwebui-run-mac`
-- in browser, open http://localhost:3000
+- in browser, open <http://localhost:3000>
 
 **Run with Raspberry Pi Ollama Server**:
 
 - `docker stop open-webui`
 - `just openwebui-run-pi`
- - this is configured to use http://rasp-ollama.ht.home url
+  - this is configured to use <http://raspi-ollama.ht.home> url
 
+---
+
+## Pre-update Readme
 
 Goal of this project:
 
