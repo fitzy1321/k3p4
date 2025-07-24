@@ -1,5 +1,5 @@
 default:
-    just list
+    just --list
 
 # default:
 #     ansible-playbook playbook.yaml -i inventory.yaml
