@@ -1,4 +1,35 @@
-.git
-.venv
-.dockerignore
+# Custom
 justfile
+**/*.md
+**/*.yaml
+**/*.yml
+.ansible-lint
+LICENSE
+
+# Git
+.git
+.gitignore
+.github
+
+# Docker
+docker-compose.yl
+Dockerfile
+.dockerignore
+.docker
+
+# Python
+.env
+.venv
+.__marimo__
+**/__pycache__
+build
+venv
+env
+dist
+.python-version
+
+# PyCharm
+.idea
+
+# VS Code
+.vscode
