@@ -1,0 +1,8 @@
+FROM codegemma:7b
+
+# Something todo with the context window
+# PARAMETER num_ctx 4096
+
+SYSTEM """
+You are a VSCocde Chat bot, helping with coding and managing VSCocde
+"""
