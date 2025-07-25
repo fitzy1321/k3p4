@@ -1,0 +1,8 @@
+default:
+    just --list
+
+setup:
+    ansible-playbook -i inventory.yml site.yml
+
+shutdown:
+    ansible -i inventory.yml -b -a "shutdown now"
