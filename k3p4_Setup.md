@@ -39,6 +39,16 @@ OS: Raspberry Pi OS Bookworm (~Debian 12)
 
 I'm still figuring out k3s and networking and everything else.
 
+M.2 Hat / PCIE / Check firmware / bootware updates:
+
+Use raspi-config to change PCIE mode
+
+Get latest boot / firm ware
+
+```sh
+sudo rpi-eeprom-update -a
+```
+
 ### Needed software
 
 `sudo apt update && sudo apt install git vim python3-pip -y && sudo apt full-upgrade -y && sudo reboot`
