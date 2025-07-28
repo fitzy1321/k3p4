@@ -51,7 +51,21 @@ sudo rpi-eeprom-update -a
 
 ### Needed software
 
-`sudo apt update && sudo apt install git vim python3-pip -y && sudo apt full-upgrade -y && sudo reboot`
+System update, and install necessary software
+`sudo apt update && sudo apt install git vim curl python3-pip python3-venv -y && sudo apt full-upgrade -y && sudo reboot`
+
+install docker, after system update:
+
+```sh
+curl -fsSL https://get.docker.com -o get-docker.sh
+sudo sh get-docker.sh   
+```
+
+install rust
+
+```sh
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+```
 
 ### Patch Configs for k3s
 
